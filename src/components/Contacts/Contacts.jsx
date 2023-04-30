@@ -5,7 +5,10 @@ const Contacts = ({ options }) => {
         {options.map(option => {
           return (
             <li key={option.id}>
-              {option.name}: {option.number}
+              <p>
+                {option.name}: {option.number}
+              </p>
+              <button type="button">Delete</button>
             </li>
           );
         })}
