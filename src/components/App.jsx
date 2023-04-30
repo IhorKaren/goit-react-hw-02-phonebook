@@ -54,16 +54,25 @@ export class App extends Component {
 
   render() {
     const filteredContacts = this.getFilteredContacts();
+    const { contacts } = this.state;
+
     return (
       <Container>
         <h1>Phonebook</h1>
         <PhonebookForm addContact={this.addContact} />
         <h2>Contacts</h2>
         <FilterForm
-          title="Find contacts by name"
+          label="Find contacts by name"
           onChange={this.handleFilterChange}
         />
-        <Contacts options={filteredContacts} removeContact={this.removeContact} />
+        {contacts.length === 0 ? (
+          <p>You don't have contacts yet</p>
+        ) : (
+          <Contacts
+            options={filteredContacts}
+            removeContact={this.removeContact}
+          />
+        )}
       </Container>
     );
   }

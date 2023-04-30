@@ -1,24 +1,35 @@
-import { Formik, Field, Form } from 'formik';
+import PropTypes from 'prop-types';
+import {
+  StyledFormik,
+  StyledForm,
+  StyledLabel,
+  StyledField,
+} from './Filter.styled';
 
-const FilterForm = ({ title, onChange }) => {
+const FilterForm = ({ label, onChange }) => {
   const initialValues = {
     filter: '',
   };
 
   return (
-    <Formik initialValues={initialValues}>
-      <Form>
-        <label htmlFor="filter">{title}</label>
-        <Field
+    <StyledFormik initialValues={initialValues}>
+      <StyledForm>
+        <StyledLabel htmlFor="filter">{label}</StyledLabel>
+        <StyledField
           type="text"
           id="filter"
           name="filter"
           onChange={onChange}
           value={onChange.filter}
         />
-      </Form>
-    </Formik>
+      </StyledForm>
+    </StyledFormik>
   );
 };
 
 export default FilterForm;
+
+FilterForm.propTypes = {
+  label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
