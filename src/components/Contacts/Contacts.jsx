@@ -1,14 +1,16 @@
-const Contacts = ({ options }) => {
+const Contacts = ({ options, removeContact }) => {
   return (
     <>
       <ul>
-        {options.map(option => {
+        {options.map(({ id, name, number }) => {
           return (
-            <li key={option.id}>
+            <li key={id}>
               <p>
-                {option.name}: {option.number}
+                {name}: {number}
               </p>
-              <button type="button">Delete</button>
+              <button type="button" onClick={() => removeContact(id)}>
+                Delete
+              </button>
             </li>
           );
         })}

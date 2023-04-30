@@ -35,6 +35,12 @@ export class App extends Component {
     }));
   };
 
+  removeContact = id => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(el => el.id !== id),
+    }));
+  };
+
   handleFilterChange = e => {
     this.setState({ filter: e.target.value });
   };
@@ -57,7 +63,7 @@ export class App extends Component {
           title="Find contacts by name"
           onChange={this.handleFilterChange}
         />
-        <Contacts options={filteredContacts} />
+        <Contacts options={filteredContacts} removeContact={this.removeContact} />
       </Container>
     );
   }

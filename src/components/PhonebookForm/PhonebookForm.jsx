@@ -21,8 +21,8 @@ const PhonebookForm = ({ addContact }) => {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={(values, { resetForm }) => {
-        addContact(values.name, values.number); // додати новий контакт до state
-        resetForm(); // очистити форму
+        addContact(values.name, values.number);
+        resetForm();
       }}
     >
       {({ errors, touched }) => (
