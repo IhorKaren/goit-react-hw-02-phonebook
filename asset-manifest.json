@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/webpack-create-react-app/static/css/main.e6c13ad2.css",
+    "main.js": "/webpack-create-react-app/static/js/main.b64ac32a.js",
+    "index.html": "/webpack-create-react-app/index.html",
+    "main.e6c13ad2.css.map": "/webpack-create-react-app/static/css/main.e6c13ad2.css.map",
+    "main.b64ac32a.js.map": "/webpack-create-react-app/static/js/main.b64ac32a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.b64ac32a.js"
+  ]
+}
