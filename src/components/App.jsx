@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { Container } from './Container/Container.styled';
+import {
+  Container,
+  MainTitle,
+  SecondTitle,
+} from './Container/Container.styled';
 import PhonebookForm from './PhonebookForm/PhonebookForm';
 import FilterForm from './Filter/Filter';
 import Contacts from './Contacts/Contacts';
@@ -58,9 +62,9 @@ export class App extends Component {
 
     return (
       <Container>
-        <h1>Phonebook</h1>
+        <MainTitle>Phonebook</MainTitle>
         <PhonebookForm addContact={this.addContact} />
-        <h2>Contacts</h2>
+        <SecondTitle>Contacts</SecondTitle>
         <FilterForm
           label="Find contacts by name"
           onChange={this.handleFilterChange}
