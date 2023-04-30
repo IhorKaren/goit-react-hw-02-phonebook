@@ -44,7 +44,7 @@ const StyledField = styled(Field)`
 const Error = styled(ErrorMessage)`
   position: absolute;
   color: red;
-  animation: ${appear} 0.5s ease-in-out;
+  animation: ${appear} 500ms ease-in-out;
 `;
 
 const StyledButton = styled.button`
@@ -52,7 +52,7 @@ const StyledButton = styled.button`
   color: white;
   padding: 8px 12px;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   border: none;
   &:hover {
     background-color: #0077b5;

@@ -21,7 +21,7 @@ const ContactItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  animation: ${appear} 0.5s ease-in-out;
+  animation: ${appear} 500ms ease-in-out;
 `;
 
 const ContactName = styled.p`
@@ -33,7 +33,7 @@ const ContactButton = styled.button`
   color: white;
   padding: 8px 12px;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   border: none;
   &:hover {
     background-color: #0077b5;
